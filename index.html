@@ -3,18 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
-  <title>My LIFF App9</title>
+  <title>My LIFF AppX</title>
   <style>
     body { padding: 256px }
     button { display: none; width: 50%; padding: 16px 0; margin: 16px auto }
   </style>
 </head>
 <body>
-  <button id="btnShare" onclick="sendShare()">XXX</button>
-  <button id="btnLogin" onclick="liff.login()">Log In</button>
-  <button id="btnLogOut" onclick="logOut()">Log Out</button>
   <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
+
+
+
+          	    window.onload = function() {
+  initializeLiff('1657153705-YZ1elgn4');
+}
+
+function initializeLiff(myLiffId) {
+    liff
+        .init({
+            liffId: myLiffId
+        })
+        .then(() => {
+        	sendShare();
+        })
+        .catch((err) => {
+        });
+}
+  	
     async function sendShare() {
       const result = await liff.shareTargetPicker([
         {
@@ -257,21 +273,8 @@
 
 
 
-    async function main() {
-      await liff.init({ liffId: "1657153705-YZ1elgn4" })
-      if (liff.isLoggedIn()) {
-        sendShare()
-        if (!liff.isInClient()) {
-         logOut()
-        }
-      } else {
-        liff.login()
-      }
-    }
 
 
-
-    main()
   </script>
 </body>
 </html>
