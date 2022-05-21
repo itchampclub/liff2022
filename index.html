@@ -3,11 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
-  <title>My LIFF AppX</title>
-  <style>
-    body { padding: 256px }
-    button { display: none; width: 50%; padding: 16px 0; margin: 16px auto }
-  </style>
+  <title>My LIFF App777</title>
 </head>
 <body>
   <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
@@ -31,8 +27,8 @@ function initializeLiff(myLiffId) {
         });
 }
   	
-    async function sendShare() {
-      const result = await liff.shareTargetPicker([
+   function sendShare() {
+    liff.shareTargetPicker([
         {
           "type": "flex",
           "altText": "Flex Message",
@@ -251,26 +247,6 @@ function initializeLiff(myLiffId) {
 }
         }
       ])
-      if (result) {
-        alert(`[${result.status}] Message sent!`)
-      } else {
-        const [majorVer, minorVer, patchVer] = (liff.getLineVersion() || "").split('.');
-
-        if (minorVer === undefined) {
-          alert('ShareTargetPicker was canceled in external browser')
-          return
-        }
-
-        if (parseInt(majorVer) >= 10 && parseInt(minorVer) >= 10 && parseInt(patchVer) > 0) {
-          alert('ShareTargetPicker was canceled in LINE app')
-        }
-      }
-    }
-    function logOut() {
-      liff.logout()
-      window.location.reload()
-    }
-
 
 
 
