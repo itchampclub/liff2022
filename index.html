@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
-  <title>My LIFF AAA</title>
+  <title>My LIFF App777</title>
 </head>
 <body>
   <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
@@ -22,14 +22,21 @@ function initializeLiff(myLiffId) {
         })
         .then(() => {
         	alert("init OK")
-        	sendShare()
+        	if (liff.isApiAvailable('shareTargetPicker')) {
+    liff.shareTargetPicker([
+        {
+            type: 'text',
+            text: 'Hello, World!',
+        },
+    ]);
+}
 
         })
         .catch((err) => {
         });
 }
   	
-   function sendShare() {
+ /*  function sendShare() {
     liff.shareTargetPicker([
         {
           "type": "flex",
@@ -73,7 +80,7 @@ function initializeLiff(myLiffId) {
 }
         }
       ])
-
+*/
 
 
 
