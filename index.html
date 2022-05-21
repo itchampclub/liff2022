@@ -2,11 +2,10 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
-  <title>My LIFF W</title>
+  <title>My LIFF Q</title>
 </head>
 <body>
-  <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+
   <script>
 
           	    window.onload = function() {
@@ -19,7 +18,6 @@ function initializeLiff(myLiffId) {
             liffId: myLiffId
         })
         .then(() => {
-        	alert("init OK")
     liff.shareTargetPicker([
         {
             type: 'text',
@@ -30,55 +28,8 @@ function initializeLiff(myLiffId) {
         .catch((err) => {
         });
 }
-  	
- /*  function sendShare() {
-    liff.shareTargetPicker([
-        {
-          "type": "flex",
-          "altText": "Flex Message",
-          "contents": {
-  "type": "bubble",
-  "footer": {
-    "type": "box",
-    "layout": "vertical",
-    "spacing": "sm",
-    "contents": [
-      {
-        "type": "button",
-        "style": "link",
-        "height": "sm",
-        "action": {
-          "type": "uri",
-          "label": "CALL",
-          "uri": "https://linecorp.com"
-        }
-      },
-      {
-        "type": "button",
-        "style": "link",
-        "height": "sm",
-        "action": {
-          "type": "uri",
-          "label": "WEBSITE",
-          "uri": "https://linecorp.com"
-        }
-      },
-      {
-        "type": "box",
-        "layout": "vertical",
-        "contents": [],
-        "margin": "sm"
-      }
-    ],
-    "flex": 0
-  }
-}
-        }
-      ])
-*/
-
-
-
+  
   </script>
+    <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 </body>
 </html>
