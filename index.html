@@ -18,15 +18,19 @@ function initializeLiff(myLiffId) {
             liffId: myLiffId
         })
         .then(() => {
-    liff.shareTargetPicker([
-        {
-            type: 'text',
-            text: 'Hello, World!',
-        },
-    ])
+        	go()
         })
         .catch((err) => {
         });
+}
+
+function go(){
+	 liff.shareTargetPicker([
+                {
+                    'type': 'text',
+                    'text': 'Hello, World!'
+                }
+            ])
 }
   
   </script>
