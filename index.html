@@ -3,13 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
-  <title>My LIFF App777</title>
+  <title>My LIFF W</title>
 </head>
 <body>
   <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
-
-
 
           	    window.onload = function() {
   initializeLiff('1657153705-YZ1elgn4');
@@ -22,15 +20,12 @@ function initializeLiff(myLiffId) {
         })
         .then(() => {
         	alert("init OK")
-        	if (liff.isApiAvailable('shareTargetPicker')) {
     liff.shareTargetPicker([
         {
             type: 'text',
             text: 'Hello, World!',
         },
-    ]);
-}
-
+    ])
         })
         .catch((err) => {
         });
