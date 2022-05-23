@@ -31,6 +31,11 @@
  </div>
     </div>
   </br>
+  <button type="button" class="btn btn-outline-primary" onclick="flex_1()">Flex1</button></center>
+  <button type="button" class="btn btn-outline-primary" onclick="flex_2()">Flex2</button></center>
+  <button type="button" class="btn btn-outline-primary" onclick="flex_3()">Flex3</button></center>
+  <button type="button" class="btn btn-outline-primary" onclick="flex_4()">Flex4</button></center>
+</br>
 <button type="button" class="btn btn-success" onclick="sendShare()">Share Target Picker</button></center>
   
   
@@ -38,6 +43,20 @@
   <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
     
+
+function flex_1() {
+document.getElementById("flexjson").value = "flex_1";
+}
+function flex_2() {
+document.getElementById("flexjson").value = "flex_2";
+}
+function flex_3() {
+document.getElementById("flexjson").value = "flex_3";
+}
+function flex_4() {
+document.getElementById("flexjson").value = "flex_4";
+}
+
 function myFunction() {
   var x = document.getElementById("flexjson").value;
   try {
@@ -61,7 +80,6 @@ if(myFunction() !== "failed"){
         const result = await liff.shareTargetPicker([myFunction()])
       if (result) {
         alert(`[${result.status}] Message sent!`)
-
         liff.closeWindow();
       } else {
         const [majorVer, minorVer, patchVer] = (liff.getLineVersion() || "").split('.');
