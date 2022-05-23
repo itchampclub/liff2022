@@ -74,6 +74,8 @@ if(myFunction() !== "failed"){
       if (result) {
         alert(`[${result.status}] Message sent!`)
 
+document.querySelector(".modal").style.display = "block";
+
 document.querySelector(".modal").classList.add("show");
 
         liff.closeWindow();
@@ -104,7 +106,6 @@ document.querySelector(".modal").classList.add("show");
       await liff.init({ liffId: "1657153705-YZ1elgn4" })
       if (liff.isLoggedIn()) {
        
-document.querySelector(".modal").style.display = "block";
       /*  if (!liff.isInClient()) {
           logOut()
         }*/
