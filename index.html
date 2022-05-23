@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
-  <title>My LIFF</title>
+  <title>My LIFF JSON</title>
   <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
@@ -45,7 +45,7 @@
     
 
 function flex_1() {
-  var f1 = {
+  const f1 = {
           "type": "bubble",
           "body": {
             "type": "box",
@@ -53,21 +53,64 @@ function flex_1() {
             "contents": [
               {
                 "type": "text",
-                "text": "hello"
+                "text": "F1"
               }
             ]
           }
         }
-document.getElementById("flexjson").value = f1;
+        const myF1 = JSON.stringify(f1);
+document.getElementById("flexjson").value = myF1;
 }
 function flex_2() {
-document.getElementById("flexjson").value = "flex_2";
+  const f2 = {
+          "type": "bubble",
+          "body": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "F2"
+              }
+            ]
+          }
+        }
+        const myF2 = JSON.stringify(f2);
+document.getElementById("flexjson").value = myF2;
 }
 function flex_3() {
-document.getElementById("flexjson").value = "flex_3";
+  const f3 = {
+          "type": "bubble",
+          "body": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "F3"
+              }
+            ]
+          }
+        }
+        const myF3 = JSON.stringify(f3);
+document.getElementById("flexjson").value = myF3;
 }
 function flex_4() {
-document.getElementById("flexjson").value = "flex_4";
+  const f4 = {
+          "type": "bubble",
+          "body": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "F4"
+              }
+            ]
+          }
+        }
+        const myF4 = JSON.stringify(f4);
+document.getElementById("flexjson").value = myF4;
 }
 
 function myFunction() {
