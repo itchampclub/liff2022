@@ -9,8 +9,9 @@
 </head>
 <body>
 	
-<div class="form-floating">
-<textarea class="form-control" id="flexjson" name="flexjson" rows="20" onchange="myFunction()">{
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+	<textarea class="form-control" id="flexjson" name="flexjson" rows="20" onchange="myFunction()">{
           "type": "bubble",
           "body": {
             "type": "box",
@@ -22,10 +23,11 @@
               }
             ]
           }
-        }</textarea>
-</div>		  
+        }</textarea>	
+</div>
+  
 	</br>
-	<button type="button" class="btn btn-success" onclick="sendShare()">Share Target Picker</button>
+	<center><button type="button" class="btn btn-success" onclick="sendShare()">Share Target Picker</button></center>
   <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
     
