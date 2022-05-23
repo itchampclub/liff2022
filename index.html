@@ -31,10 +31,10 @@
  </div>
     </div>
   </br>
-  <button type="button" class="btn btn-outline-primary" onclick="flex_1()">Flex1</button></center>
-  <button type="button" class="btn btn-outline-primary" onclick="flex_2()">Flex2</button></center>
-  <button type="button" class="btn btn-outline-primary" onclick="flex_3()">Flex3</button></center>
-  <button type="button" class="btn btn-outline-primary" onclick="flex_4()">Flex4</button></center>
+  <button type="button" class="btn btn-outline-primary" onclick="flex_1()">Flex1</button>
+  <button type="button" class="btn btn-outline-primary" onclick="flex_2()">Flex2</button>
+  <button type="button" class="btn btn-outline-primary" onclick="flex_3()">Flex3</button>
+  <button type="button" class="btn btn-outline-primary" onclick="flex_4()">Flex4</button>
 </br>
 <button type="button" class="btn btn-success" onclick="sendShare()">Share Target Picker</button></center>
   
@@ -45,7 +45,20 @@
     
 
 function flex_1() {
-document.getElementById("flexjson").value = "flex_1";
+  var f1 = {
+          "type": "bubble",
+          "body": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "hello"
+              }
+            ]
+          }
+        }
+document.getElementById("flexjson").value = f1;
 }
 function flex_2() {
 document.getElementById("flexjson").value = "flex_2";
