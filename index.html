@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
-  <title>My LIFF JSON</title>
+  <title>My LIFF</title>
   <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
@@ -53,7 +53,8 @@ function flex_1() {
             "contents": [
               {
                 "type": "text",
-                "text": "F1"
+                "text": "hello",
+        "align": "start"
               }
             ]
           }
@@ -70,7 +71,8 @@ function flex_2() {
             "contents": [
               {
                 "type": "text",
-                "text": "F2"
+                "text": "hello",
+        "align": "center"
               }
             ]
           }
@@ -87,7 +89,8 @@ function flex_3() {
             "contents": [
               {
                 "type": "text",
-                "text": "F3"
+                "text": "hello",
+        "align": "end"
               }
             ]
           }
@@ -104,7 +107,8 @@ function flex_4() {
             "contents": [
               {
                 "type": "text",
-                "text": "F4"
+                "text": "hello",
+        "color": "#ff0000"
               }
             ]
           }
@@ -120,7 +124,7 @@ function myFunction() {
     console.log(x)
     var flexdat = {}
     flexdat["type"] = "flex";
-    flexdat["altText"] = "Flex Message";
+    flexdat["altText"] = "Flex";
     flexdat["contents"] = x;
     return flexdat
   }
