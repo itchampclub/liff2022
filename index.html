@@ -4,18 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
   <title>My LIFF</title>
-	<!-- CSS only -->
+  <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 <body>
-
-	<div class="row g-2">
-		
+  <center>
+  <div class="row g-2">
   <div class="col-md">
 <div class="mb-3">
   <label for="exampleFormControlTextarea1" class="form-label">JSON - </label>
-	<a href="https://developers.line.biz/flex-simulator"  target="_blank" class="link-info">FLEX MESSAGE SIMULATOR</a>
-	<textarea class="form-control" id="flexjson" name="flexjson" rows="20" onchange="myFunction()">{
+  <a href="https://developers.line.biz/flex-simulator"  target="_blank" class="link-info">FLEX MESSAGE SIMULATOR</a>
+  <textarea class="form-control" id="flexjson" name="flexjson" rows="20" onchange="myFunction()">{
           "type": "bubble",
           "body": {
             "type": "box",
@@ -27,35 +26,15 @@
               }
             ]
           }
-        }</textarea>	
+        }</textarea>  
 </div>
  </div>
-		
-		  <div class="col-md">
-<div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">JSON - </label>
-	<a href="https://developers.line.biz/flex-simulator"  target="_blank" class="link-info">FLEX MESSAGE SIMULATOR</a>
-	<textarea class="form-control" id="flexjson" name="flexjsonx" rows="20" onchange="myFunction()">{
-          "type": "bubble",
-          "body": {
-            "type": "box",
-            "layout": "vertical",
-            "contents": [
-              {
-                "type": "text",
-                "text": "hello"
-              }
-            ]
-          }
-        }</textarea>	
-</div>
- </div>
-		</div>
-	</br>
-	<center><button type="button" class="btn btn-success" onclick="sendShare()">Share Target Picker</button></center>
-	
-	
-	
+    </div>
+  </br>
+<button type="button" class="btn btn-success" onclick="sendShare()">Share Target Picker</button></center>
+  
+  
+  
   <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
     
@@ -79,7 +58,7 @@ function myFunction() {
     
     async function sendShare() {
 if(myFunction() !== "failed"){
-	      const result = await liff.shareTargetPicker([myFunction()])
+        const result = await liff.shareTargetPicker([myFunction()])
       if (result) {
         alert(`[${result.status}] Message sent!`)
 
@@ -97,7 +76,7 @@ if(myFunction() !== "failed"){
         }
       }
 }else{
-	alert("JSON Incorrect.")
+  alert("JSON Incorrect.")
 }
     }
     function logOut() {
@@ -120,7 +99,7 @@ if(myFunction() !== "failed"){
     }
     main()
   </script>
-	<!-- JavaScript Bundle with Popper -->
+  <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
