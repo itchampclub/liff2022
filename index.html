@@ -74,9 +74,9 @@ if(myFunction() !== "failed"){
       await liff.init({ liffId: "1657153705-YZ1elgn4" })
       if (liff.isLoggedIn()) {
         //----------------------------------
-        if (!liff.isInClient()) {
+      /*  if (!liff.isInClient()) {
           logOut()
-        }
+        }*/
       } else {
         liff.login()
       }
