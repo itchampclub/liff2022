@@ -56,9 +56,21 @@
 function js_onload_code() {
  var myParam = window.location.search;
 var exc = myParam.split('flexid=')[1].split('&')[0];
-document.getElementById("flexjson").value = exc;
-alert(" Hello, you are learning onload event in JavaScript");
 
+
+
+const xurl = "https://script.google.com/macros/s/AKfycbxst6WNl17-gR7eDsO_B_3t7s-H2WcUAJgdY3dP0Arn7d-4nH_dqSnFkukE1kIPXi_D/exec";
+  var xmlhttp = new XMLHttpRequest();
+        var theUrl = xurl+'?flexid='+exc;
+        xmlhttp.open('GET', theUrl);
+        xmlhttp.send();
+            xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var jsonResponse = JSON.parse(this.responseText);
+        }
+        let decoded = window.atob(jsonResponse.desc);
+document.getElementById("flexjson").value = decoded;
+}
 }
 
 
@@ -159,6 +171,9 @@ function myFunction() {
 
 function saveShare() {
 
+//https://liff.line.me/1657153705-YZ1elgn4?flexid=sasasas
+
+
 var sflex = document.getElementById("flexjson").value
 var myF1 = JSON.stringify(sflex);
 let code = window.btoa(myF1);
@@ -177,9 +192,6 @@ const xurl = "https://script.google.com/macros/s/AKfycbxst6WNl17-gR7eDsO_B_3t7s-
             var jsonResponse = JSON.parse(this.responseText);
         }
         alert(jsonResponse.desc);
-
-//let decoded = window.atob(encoded);
-//document.getElementById("demo").innerHTML = "Encoded: " + encoded + "<br>" + "Decoded: " + decoded;
 }
 
 }
