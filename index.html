@@ -56,9 +56,6 @@
 function js_onload_code() {
  var myParam = window.location.search;
 var exc = myParam.split('flexid=')[1].split('&')[0];
-
-
-
 const xurl = "https://script.google.com/macros/s/AKfycbxst6WNl17-gR7eDsO_B_3t7s-H2WcUAJgdY3dP0Arn7d-4nH_dqSnFkukE1kIPXi_D/exec";
   var xmlhttp = new XMLHttpRequest();
         var theUrl = xurl+'?flexid='+exc;
@@ -181,12 +178,13 @@ let lid = "lid"+Date.now();
 alert(code)
 alert(lid)
 document.getElementById("demo").value = "https://liff.line.me/1657153705-YZ1elgn4?flexid="+lid
-
 const xurl = "https://script.google.com/macros/s/AKfycbxst6WNl17-gR7eDsO_B_3t7s-H2WcUAJgdY3dP0Arn7d-4nH_dqSnFkukE1kIPXi_D/exec";
-  var xmlhttp = new XMLHttpRequest();
-        var theUrl = xurl+'?lid='+lid+'&code='+code;
-        xmlhttp.open('GET', theUrl);
-        xmlhttp.send();
+
+var xmlhttp = new XMLHttpRequest();
+var theUrl = xurl+'?lid='+lid+'&code='+code;
+xmlhttp.open("POST", theUrl);
+xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+xmlhttp.send(JSON.stringify({ "lid": lid, "code": code}));
             xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             var jsonResponse = JSON.parse(this.responseText);
