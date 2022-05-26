@@ -52,12 +52,16 @@
   <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
     
+window.onload= js_onload_code ();
 
-    window.onload = function() {
-      var myParam = window.location.search;
+function js_onload_code (){
+ var myParam = window.location.search;
 var exc = myParam.split('flexid=')[1].split('&')[0];
-document.getElementById("flexjson").value = exc
-    }
+document.getElementById("flexjson").value = exc;
+alert(" Hello, you are learning onload event in JavaScript");
+
+}
+
 
 
 
