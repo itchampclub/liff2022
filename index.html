@@ -52,9 +52,8 @@
   <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
     
-window.onload= js_onload_code ();
 
-function js_onload_code (){
+function js_onload_code() {
  var myParam = window.location.search;
 var exc = myParam.split('flexid=')[1].split('&')[0];
 document.getElementById("flexjson").value = exc;
@@ -221,7 +220,7 @@ if(myFunction() !== "failed"){
     async function main() {
       await liff.init({ liffId: "1657153705-YZ1elgn4" })
       if (liff.isLoggedIn()) {
-       
+       js_onload_code()
       /*  if (!liff.isInClient()) {
           logOut()
         }*/
