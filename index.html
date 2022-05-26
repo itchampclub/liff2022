@@ -181,7 +181,7 @@ document.getElementById("demo").value = "https://liff.line.me/1657153705-YZ1elgn
 const xurl = "https://script.google.com/macros/s/AKfycbxst6WNl17-gR7eDsO_B_3t7s-H2WcUAJgdY3dP0Arn7d-4nH_dqSnFkukE1kIPXi_D/exec";
 
 var xmlhttp = new XMLHttpRequest();
-var theUrl = xurl+'?lid='+lid+'&code='+code;
+var theUrl = xurl;
 xmlhttp.open("POST", theUrl);
 xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 xmlhttp.send(JSON.stringify({ "lid": lid, "code": code}));
