@@ -30,12 +30,21 @@
 </div>
  </div>
     </div>
+</br>
+<div class="input-group mb-3">
+  <input type="text" class="form-control" id="demo" placeholder="Ctrl+C > Copy liff url." aria-label="Ctrl+C > Copy liff url." aria-describedby="basic-addon2">
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="button">Button</button>
+  </div>
+</div>
+
   </br>
   <button type="button" class="btn btn-outline-primary" onclick="flex_1()">Flex1</button>
   <button type="button" class="btn btn-outline-primary" onclick="flex_2()">Flex2</button>
   <button type="button" class="btn btn-outline-primary" onclick="flex_3()">Flex3</button>
   <button type="button" class="btn btn-outline-primary" onclick="flex_4()">Flex4</button>
 </br>
+<button type="button" class="btn btn-success" onclick="saveShare()">Save liff</button>
 <button type="button" class="btn btn-success" onclick="sendShare()">Share Target Picker</button></center>
   
   
@@ -133,6 +142,23 @@ function myFunction() {
     return "failed"
   }
 }
+
+
+
+function saveShare() {
+
+var sflex = document.getElementById("flexjson").value
+var myF1 = JSON.stringify(sflex);
+let code = window.btoa(myF1);
+let fid = "fid"+Date.now();
+alert(code)
+alert(fid)
+document.getElementById("demo").value = "https://liff.line.me/1657153705-YZ1elgn4?flexid="+fid
+
+//let decoded = window.atob(encoded);
+//document.getElementById("demo").innerHTML = "Encoded: " + encoded + "<br>" + "Decoded: " + decoded;
+}
+
 
     
     async function sendShare() {
