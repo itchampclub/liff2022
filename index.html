@@ -54,9 +54,9 @@
     
 
 function js_onload_code() {
-// var myParam = window.location.search;
-//var exc = myParam.split('flexid=')[1].split('&')[0];
-//document.getElementById("flexjson").value = exc;
+ var myParam = window.location.search;
+var exc = myParam.split('flexid=')[1].split('&')[0];
+document.getElementById("flexjson").value = exc;
 alert(" Hello, you are learning onload event in JavaScript");
 
 }
@@ -178,15 +178,11 @@ const xurl = "https://script.google.com/macros/s/AKfycbxst6WNl17-gR7eDsO_B_3t7s-
         }
         alert(jsonResponse.desc);
 
-
-
-
-
 //let decoded = window.atob(encoded);
 //document.getElementById("demo").innerHTML = "Encoded: " + encoded + "<br>" + "Decoded: " + decoded;
 }
 
-
+}
     
     async function sendShare() {
 if(myFunction() !== "failed"){
@@ -220,7 +216,7 @@ if(myFunction() !== "failed"){
     async function main() {
       await liff.init({ liffId: "1657153705-YZ1elgn4" })
       if (liff.isLoggedIn()) {
-       js_onload_code()
+        js_onload_code()
       /*  if (!liff.isInClient()) {
           logOut()
         }*/
